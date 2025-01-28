@@ -53,4 +53,4 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 
-Check out [Galleon’s docs](https://galleon-tools.netlify.app/docs/), read [the Galleon documentation](https://galleon-tools.netlify.app/docs), or jump into the [Galleon’s ... server](https://galleon-tools.netlify.app/).
+Check out [Galleon’s docs](https://galleon-tools.netlify.app/guides/example/), read [the Galleon documentation](https://galleon-tools.netlify.app/guides/example), or jump into the [Galleon’s ... server](https://galleon-tools.netlify.app/).
