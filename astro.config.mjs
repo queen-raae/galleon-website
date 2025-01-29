@@ -7,9 +7,9 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Docs with Tailwind',
+			title: 'Galleon Docs',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/queen-raae/galleon-website/',
 			},
 			sidebar: [
 				{
@@ -25,6 +25,9 @@ export default defineConfig({
 				},
 			],
 			customCss: ['./src/tailwind.css'],
+			editLink: {
+				baseUrl: 'https://github.com/queen-raae/galleon-website/edit/main/docs/',
+			  },
 		}),
 		tailwind({ applyBaseStyles: false }),
 	],
