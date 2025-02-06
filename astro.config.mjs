@@ -7,9 +7,13 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Galleon Docs',
+			title: 'Galleon',
+			
 			social: {
 				github: 'https://github.com/queen-raae/galleon-website/',
+				'x.com': 'https://x.com/raae',
+    			youtube: 'https://www.youtube.com/@QueenRaae/shorts',
+				'email': 'mailto:raae@lillylabs.no',
 			},
 			sidebar: [
 				{
