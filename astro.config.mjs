@@ -8,6 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Galleon',
+			favicon: '/favicon.svg',
 			
 			social: {
 				github: 'https://github.com/queen-raae/galleon-website/',
