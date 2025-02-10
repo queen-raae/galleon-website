@@ -5,7 +5,7 @@ template: splash
 hero:
   title: |
     <span
-      class="font-black text-slate-900"
+      class="font-black text-white"
     >
       Unlock the Treasure of Dynamic Data on 
     </span>
@@ -13,11 +13,11 @@ hero:
       class="font-black text-transparent
         bg-clip-text bg-gradient-to-b
         from-orange-500 to-yellow-300
-        dark:from-orange-500 dark:to-orange-200"
+        dark:from-orange-500 dark:to-yellow-300"
     >
       Your Webflow Site 
     </span>
-  tagline: <span class="text-slate-900">Set sail with Galleon Gateway to display secure public and private data using Xano. Powered by simple data attributes, no coding required.</span>
+  tagline: <span class="font-black text-white">Set sail with Galleon Gateway to display secure public and private data using Xano. Powered by simple data attributes, no coding required.</span>
   image:
     file: ../../assets/gateway.png
   actions: 
@@ -35,7 +35,7 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Update ..." icon="pencil">
+	<Card class="text-white font-black" title="Update ..." icon="pencil">
 		Edit `src/content/docs/index.mdx` to see this page change.
 	</Card>
 	<Card title="Add new ..." icon="add-document">
