@@ -10,6 +10,11 @@ export default defineConfig({
     starlight({
       title: "Galleon",
       favicon: "/favicon.svg",
+      customCss: [
+        // Fontsource files for to regular and semi-bold font weights.
+        "@fontsource/dm-serif-text/400.css",
+        "@fontsource/dm-serif-text/400-italic.css",
+      ],
       social: {
         github: "https://github.com/queen-raae/galleon-website/",
         "x.com": "https://x.com/raae",

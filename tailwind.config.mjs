@@ -12,6 +12,10 @@ export default {
         // Your preferred gray scale. Zinc is closest to Starlight’s defaults.
         gray: colors.yellow,
       },
+      fontFamily: {
+        // Your preferred code font. Starlight uses system monospace fonts by default.
+        serif: ['"DM Serif Text"'],
+      },
     },
   },
   plugins: [starlightPlugin()],
