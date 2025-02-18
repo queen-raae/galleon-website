@@ -17,7 +17,7 @@ export default {
       colors: { accent },
       fontFamily: {
         // Your preferred code font. Starlight uses system monospace fonts by default.
-        serif: ['"DM Serif Text"'],
+        brand: ['"Moul"'],
       },
     },
   },

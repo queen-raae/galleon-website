@@ -11,9 +11,9 @@ export default defineConfig({
       title: "Galleon",
       favicon: "/favicon.svg",
       customCss: [
+        "./src/tailwind.css",
         // Fontsource files for to regular and semi-bold font weights.
-        "@fontsource/dm-serif-text/400.css",
-        "@fontsource/dm-serif-text/400-italic.css",
+        "@fontsource/moul/400.css",
       ],
       social: {
         github: "https://github.com/queen-raae/galleon-website/",
@@ -34,7 +34,6 @@ export default defineConfig({
           autogenerate: { directory: "reference" },
         },
       ],
-      customCss: ["./src/tailwind.css"],
       editLink: {
         baseUrl:
           "https://github.com/queen-raae/galleon-website/edit/main/docs/",
