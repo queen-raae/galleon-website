@@ -11,3 +11,31 @@ https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer
   @apply font-brand;
   @apply translate-y-1;
 }
+
+.sl-link-button {
+  @apply font-bold;
+}
+
+/*
+Content
+*/
+
+.hero h1 {
+  @apply font-black;
+}
+
+/*
+Galleon Utility classes
+*/
+
+.brand {
+  @apply inline-block;
+  @apply font-brand;
+  @apply translate-y-[0.5px];
+}
+
+.fire {
+  @apply text-transparent bg-clip-text bg-gradient-to-b;
+  @apply from-orange-600 to-yellow-400;
+  @apply dark:from-orange-500 dark:to-yellow-300;
+}
