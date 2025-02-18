@@ -5,11 +5,11 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://galleon.tools",
   integrations: [
     starlight({
       title: "Galleon",
       favicon: "/favicon.svg",
-
       social: {
         github: "https://github.com/queen-raae/galleon-website/",
         "x.com": "https://x.com/raae",
