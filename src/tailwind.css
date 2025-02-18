@@ -18,6 +18,7 @@ https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer
 
 .sl-markdown-content {
   @apply text-lg;
+  @apply max-w-prose;
 }
 
 /*
