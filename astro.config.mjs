@@ -15,6 +15,24 @@ export default defineConfig({
         // Fontsource files for to regular and semi-bold font weights.
         "@fontsource/moul/400.css",
       ],
+      head: [
+        {
+          tag: "script",
+          content: `
+            var o_options = {
+              domain: 'galleon.outseta.com',
+              load: 'emailList',
+            };
+          `,
+        },
+        {
+          tag: "script",
+          attrs: {
+            src: "https://cdn.outseta.com/outseta.min.js",
+            "data-options": "o_options",
+          },
+        },
+      ],
       social: {
         github: "https://github.com/queen-raae/galleon-website/",
         "x.com": "https://x.com/raae",
