@@ -16,6 +16,10 @@ https://tailwindcss.com/docs/adding-custom-styles#using-css-and-layer
   @apply font-bold;
 }
 
+.sl-markdown-content {
+  @apply text-lg;
+}
+
 /*
 Content
 */
