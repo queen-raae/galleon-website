@@ -37,7 +37,7 @@ export default defineConfig({
         github: "https://github.com/queen-raae/galleon-website/",
         "x.com": "https://x.com/raae",
         youtube: "https://www.youtube.com/@QueenRaae/shorts",
-        email: "mailto:raae@lillylabs.no",
+        email: "mailto:queen@galleon.tools",
       },
       sidebar: [
         {
