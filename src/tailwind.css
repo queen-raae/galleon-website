@@ -43,4 +43,5 @@ Galleon Utility classes
   @apply text-transparent bg-clip-text bg-gradient-to-b;
   @apply from-orange-600 to-yellow-400;
   @apply dark:from-orange-500 dark:to-yellow-300;
+  @apply inline-block;
 }
