@@ -8,81 +8,104 @@ import heroIllustration from "../assets/hero-pirate.png";
   title="Galleon"
   description="Set sail with Galleon Attributes to bring user data from Xano onto your Webflow site—starting with public data, and soon expanding to personalized content for logged-in users."
 >
-  <main class="mx-auto max-w-7xl px-6 pt-24 lg:px-12 lg:pt-32">
-    <h1 class="mb-6 font-brand text-3xl font-black text-orange-600">Galleon</h1>
-    <section
-      class="mb-24 flex flex-col items-center gap-8 md:flex-row lg:gap-8"
+  <main class="mx-auto px-6 py-24 lg:px-8">
+    <header
+      class:list={[
+        "mx-auto lg:max-w-6xl",
+        "flex flex-col items-center justify-center gap-4 lg:flex-row-reverse",
+        "text-center lg:text-left",
+      ]}
     >
-      <div class="max-w-2xl flex-1">
-        <h1
-          class="mb-6 text-5xl font-black leading-tight lg:text-6xl lg:leading-tight"
-        >
-          Unlock the Treasure of User Data on
-          <span
-            class="inline-block bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent"
-            >Your Webflow Site</span
-          >
-        </h1>
+      <div class="max-w-xl">
+        <h2 class="font-brand text-base/7 font-semibold text-orange-600">
+          Galleon Tools
+        </h2>
         <p
-          class="mb-8 text-lg leading-relaxed text-gray-700 lg:text-2xl lg:leading-relaxed"
+          class="text-4xl font-semibold tracking-tight text-balance text-gray-950 sm:text-5xl"
         >
-          Set sail with <strong>Galleon Attributes</strong> to bring user data from
-          Xano onto your Webflow site—starting with public data, and soon expanding
-          to personalized content for logged-in users.
+          Bring user data to your site, securely 🔐
         </p>
       </div>
-      <div class="max-w-lg flex-1">
+
+      <div class="max-w-lg">
         <Image
           src={heroIllustration}
           alt="Pirate character next to a browser window with skull icons"
           class="mx-auto w-full"
         />
       </div>
-    </section>
+    </header>
 
-    <section class="prose prose-lg dark:prose-invert">
-      <h2 class="flex items-center gap-2">
-        <span>🚧</span>
-        <span>Work in Progress</span>
-      </h2>
+    <!-- Tools -->
+    <section
+      class:list={[
+        "min-h-3xl mx-auto max-w-7xl",
+        "grid grid-cols-1 grid-rows-6 gap-4 lg:grid-cols-5 lg:grid-rows-3",
+        "[&>*]:bg-white [&>*]:p-6 [&>*]:shadow [&>*]:ring-1 [&>*]:ring-black/5",
+      ]}
+    >
+      <!--- Galleon Gateway --->
+      <div
+        class:list={[
+          "row-span-3 lg:col-span-3",
+          "rounded-t-2xl lg:rounded-none lg:rounded-l-2xl",
+          "flex flex-col",
+        ]}
+      >
+        <h2 class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+          Galleon Gateway
+        </h2>
+        <p class="mt-2 max-w-lg text-base/6 text-gray-600">
+          Gateway sits between your website<sup>1</sup> and your data storage<sup
+            >2</sup
+          >, ensuring only the rightful crew members<sup>3</sup> glimpse their share
+          of the booty!
+        </p>
+        <small class="mt-auto"><sup>1</sup> Webflow, Framer, Next, etc.</small>
+        <small><sup>2</sup> Google Sheet, Airtable, Notion, etc.</small>
+        <small><sup>3</sup> Your Outseta or Memberstack users.</small>
+      </div>
 
-      <p>
-        Galleon Attributes isn't quite ready to leave the dock, but this video
-        highlights our vision! 🤯<br />
-        Watch as we fetch a joke from the Chuck Norris API and display it on the
-        page using the still-evolving
-        <code>data-gl-get</code>, <code>data-gl-bind</code>, and <code
-          >data-gl-bind-href</code
-        > attributes.
-      </p>
+      <!--- Galleon Attributes --->
+      <div
+        class:list={[
+          "row-span-2 lg:col-span-2",
+          "lg:rounded-none lg:rounded-tr-2xl",
+          "flex flex-col",
+        ]}
+      >
+        <h2 class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+          Galleon Attributes
+        </h2>
+        <p class="mt-2 max-w-lg text-base/6 text-gray-600">
+          Interact with Galleon Gateway* using data attributes.
+        </p>
 
-      <video
-        src="/demos/chuck-demo-1.mp4"
-        controls
-        class="my-8 w-full rounded-lg shadow-lg"></video>
+        <small class="mt-auto flex flex-wrap items-center gap-2">
+          <span>Or any other REST API: Xano, Supabase, etc</span>
+          <a
+            href="https://github.com/queen-raae/galleon-attributes"
+            type="button"
+            class="flex-initial rounded-sm bg-orange-600 px-2 py-1 text-xs font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >Start using today</a
+          >
+        </small>
+      </div>
 
-      <h2 class="flex items-center gap-2">
-        <span>🏴‍☠️</span>
-        <span>Interested in Galleon Attributes?</span>
-      </h2>
-
-      <p>
-        Join the voyage by signing up for the<a
-          href="https://galleon.outseta.com/email/lists/7maReJQE/subscribe?registrationFieldConfiguration=%5B%7B%22defaultValue%22%3A%22%22%2C%22definition%22%3A%7B%22SystemName%22%3A%22Email%22%7D%2C%22hidden%22%3Afalse%2C%22required%22%3Atrue%7D%2C%7B%22defaultValue%22%3A%22%22%2C%22definition%22%3A%7B%22SystemName%22%3A%22FirstName%22%7D%2C%22hidden%22%3Afalse%2C%22required%22%3Afalse%7D%5D"
-          class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
-          >Galleon Gazette</a
-        >!
-      </p>
-
-      <p>
-        Got ideas or suggestions? ⚓ Drop me a message at <a
-          href="mailto:queen@galleon.tools"
-          class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
-          >queen@galleon.tools</a
-        >—I'd love to hear how Galleon Attributes can work for you!
-      </p>
-
-      <div class="h-24"></div>
+      <!--- Galleon Your Idea --->
+      <div
+        class:list={[
+          "row-span-1 lg:col-span-2",
+          "rounded-b-2xl lg:rounded-none lg:rounded-br-2xl",
+        ]}
+      >
+        <h2 class="mt-2 text-lg font-medium tracking-tight text-gray-950">
+          Galleon {`<your idea here>`}
+        </h2>
+        <p class="mt-2 max-w-lg text-base/6 text-gray-600">
+          Let us know what you'd like to see!
+        </p>
+      </div>
     </section>
   </main>
 </Layout>
