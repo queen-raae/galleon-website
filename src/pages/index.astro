@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import heroIllustration from "../assets/hero-pirate.png";
+---
+
+<Layout
+  title="Galleon"
+  description="Set sail with Galleon Attributes to bring user data from Xano onto your Webflow site—starting with public data, and soon expanding to personalized content for logged-in users."
+>
+  <main class="mx-auto max-w-7xl px-6 pt-24 lg:px-12 lg:pt-32">
+    <h1 class="mb-6 font-brand text-3xl font-black text-orange-600">Galleon</h1>
+    <section
+      class="mb-24 flex flex-col items-center gap-8 md:flex-row lg:gap-8"
+    >
+      <div class="max-w-2xl flex-1">
+        <h1
+          class="mb-6 text-5xl font-black leading-tight lg:text-6xl lg:leading-tight"
+        >
+          Unlock the Treasure of User Data on
+          <span
+            class="inline-block bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent"
+            >Your Webflow Site</span
+          >
+        </h1>
+        <p
+          class="mb-8 text-lg leading-relaxed text-gray-700 lg:text-2xl lg:leading-relaxed"
+        >
+          Set sail with <strong>Galleon Attributes</strong> to bring user data from
+          Xano onto your Webflow site—starting with public data, and soon expanding
+          to personalized content for logged-in users.
+        </p>
+      </div>
+      <div class="max-w-lg flex-1">
+        <Image
+          src={heroIllustration}
+          alt="Pirate character next to a browser window with skull icons"
+          class="mx-auto w-full"
+        />
+      </div>
+    </section>
+
+    <section class="prose prose-lg dark:prose-invert">
+      <h2 class="flex items-center gap-2">
+        <span>🚧</span>
+        <span>Work in Progress</span>
+      </h2>
+
+      <p>
+        Galleon Attributes isn't quite ready to leave the dock, but this video
+        highlights our vision! 🤯<br />
+        Watch as we fetch a joke from the Chuck Norris API and display it on the
+        page using the still-evolving
+        <code>data-gl-get</code>, <code>data-gl-bind</code>, and <code
+          >data-gl-bind-href</code
+        > attributes.
+      </p>
+
+      <video
+        src="/demos/chuck-demo-1.mp4"
+        controls
+        class="my-8 w-full rounded-lg shadow-lg"></video>
+
+      <h2 class="flex items-center gap-2">
+        <span>🏴‍☠️</span>
+        <span>Interested in Galleon Attributes?</span>
+      </h2>
+
+      <p>
+        Join the voyage by signing up for the<a
+          href="https://galleon.outseta.com/email/lists/7maReJQE/subscribe?registrationFieldConfiguration=%5B%7B%22defaultValue%22%3A%22%22%2C%22definition%22%3A%7B%22SystemName%22%3A%22Email%22%7D%2C%22hidden%22%3Afalse%2C%22required%22%3Atrue%7D%2C%7B%22defaultValue%22%3A%22%22%2C%22definition%22%3A%7B%22SystemName%22%3A%22FirstName%22%7D%2C%22hidden%22%3Afalse%2C%22required%22%3Afalse%7D%5D"
+          class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+          >Galleon Gazette</a
+        >!
+      </p>
+
+      <p>
+        Got ideas or suggestions? ⚓ Drop me a message at <a
+          href="mailto:queen@galleon.tools"
+          class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+          >queen@galleon.tools</a
+        >—I'd love to hear how Galleon Attributes can work for you!
+      </p>
+
+      <div class="h-24"></div>
+    </section>
+  </main>
+</Layout>
