@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "@fontsource/moul";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --font-sans: InterVariable, sans-serif;
+  --font-brand: Moul, serif;
+}
