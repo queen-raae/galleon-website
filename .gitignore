@@ -1,3 +1,6 @@
+# remote content
+remote-content/*.md
+
 # build output
 dist/
 # generated types
