@@ -5,16 +5,18 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/data.js && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "data": "node scripts/data.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",
     "@astrojs/tailwind": "^5.1.4",
     "@fontsource/moul": "^5.1.1",
     "astro": "^5.1.5",
+    "marked": "^15.0.7",
     "sharp": "^0.32.5",
     "tailwindcss": "^3.4.4"
   },
