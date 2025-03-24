@@ -1,5 +1,10 @@
+# remote content
+remote-content/*.md
+
 # build output
 dist/
+.netlify/
+
 # generated types
 .astro/
 

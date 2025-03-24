@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/data.js && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "data": "node scripts/data.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",
@@ -17,6 +18,7 @@
     "@fontsource/moul": "^5.1.1",
     "astro": "^5.1.5",
     "jose": "^6.0.10",
+    "marked": "^15.0.7",
     "sharp": "^0.32.5",
     "tailwindcss": "^3.4.4"
   },
@@ -25,5 +27,8 @@
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.6.1"
   }
 }
