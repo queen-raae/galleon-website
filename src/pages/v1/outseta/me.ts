@@ -30,6 +30,9 @@ const verifyToken = async (token: string | undefined) => {
 
 const headers = {
   "Content-Type": "application/json",
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
 export const GET: APIRoute = async ({ request }) => {
@@ -50,20 +53,29 @@ export const GET: APIRoute = async ({ request }) => {
     );
   }
 
+  let description = `Your email is <strong>${payload?.email}</strong> and your unique identifier (uid) is <code>${payload?.sub}</code>.
+  You are ${!payload?.["outseta:isPrimary"] ? "not" : ""} the primary person for the account with uid <code>${payload?.["outseta:accountUid"]}</code>.`;
+
+  const addOns = payload?.["outseta:addOnUids"] as string;
+  if (addOns) {
+    description += ` You have the following add-ons: <code>${addOns}</code>.`;
+  }
+
   // Respond
   return new Response(
     JSON.stringify({
       greeting: `Hello ${payload?.name || "Pirate"}`,
-      name: payload?.name,
-      email: payload?.email,
-      personUid: payload?.sub,
-      accountUid: payload?.["outseta:accountUid"],
-      planUid: payload?.["outseta:planUid"],
-      isPrimary: payload?.["outseta:isPrimary"],
-      addOnUids: payload?.["outseta:addOnUids"],
+      description: description,
     }),
     {
       headers,
     },
   );
+};
+
+export const OPTIONS: APIRoute = async () => {
+  return new Response(null, {
+    headers,
+    status: 204,
+  });
 };
