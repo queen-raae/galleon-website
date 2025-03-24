@@ -53,8 +53,8 @@ export const GET: APIRoute = async ({ request }) => {
     );
   }
 
-  let description = `Your email is ${payload?.email} and your unique identifier (uid) is ${payload?.sub}.
-  You are ${!payload?.["outseta:isPrimary"] ? "not" : ""} the primary person for the account with uid ${payload?.["outseta:accountUid"]}.`;
+  let description = `Your email is <strong>${payload?.email}</strong> and your unique identifier (uid) is <code>${payload?.sub}</code>.
+  You are ${!payload?.["outseta:isPrimary"] ? "not" : ""} the primary person for the account with uid <code>${payload?.["outseta:accountUid"]}</code>.`;
 
   const addOns = payload?.["outseta:addOnUids"] as string;
   if (addOns) {
