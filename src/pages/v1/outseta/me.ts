@@ -58,7 +58,7 @@ export const GET: APIRoute = async ({ request }) => {
 
   const addOns = payload?.["outseta:addOnUids"] as string;
   if (addOns) {
-    description += ` You have the following add-ons: ${addOns}.`;
+    description += ` You have the following add-ons: <code>${addOns}</code>.`;
   }
 
   // Respond
