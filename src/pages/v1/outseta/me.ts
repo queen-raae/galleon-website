@@ -30,6 +30,9 @@ const verifyToken = async (token: string | undefined) => {
 
 const headers = {
   "Content-Type": "application/json",
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
 export const GET: APIRoute = async ({ request }) => {
@@ -66,4 +69,11 @@ export const GET: APIRoute = async ({ request }) => {
       headers,
     },
   );
+};
+
+export const OPTIONS: APIRoute = async () => {
+  return new Response(null, {
+    headers,
+    status: 204,
+  });
 };
