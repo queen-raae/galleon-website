@@ -1,24 +1,36 @@
 import { join } from "node:path";
-import { writeFile } from "node:fs";
+import { writeFileSync } from "node:fs";
 
 const items = [
   {
-    url: "https://raw.githubusercontent.com/queen-raae/galleon-attributes/main/readme.md",
-    path: "remote-content/attributes.md",
+    source: {
+      base: "https://raw.githubusercontent.com/queen-raae/galleon-attributes/main/",
+      path: "readme.md",
+    },
+    destination: {
+      path: "remote-content/attributes.md",
+    },
   },
 ];
 
-export async function fetchMarkdownFile(url) {
+export async function fetchMarkdownFile(item) {
+  const url = new URL(item.path, item.base);
   const response = await fetch(url);
   const content = await response.text();
 
-  return content;
+  // Add GitHub raw content URL prefix to image paths
+  const transformedContent = content.replace(
+    /!\[(.*?)\]\((assets\/.*?)\)/g,
+    `![$1](${item.base}$2)`,
+  );
+
+  return transformedContent;
 }
 
 items.forEach(async (item) => {
-  const content = await fetchMarkdownFile(item.url);
-  await writeFile(join(process.cwd(), item.path), content, (err) => {
+  const content = await fetchMarkdownFile(item.source);
+  writeFileSync(join(process.cwd(), item.destination.path), content, (err) => {
     if (err) throw err;
-    console.log(`The file ${item.path} has been saved!`);
+    console.log(`The file ${item.destination.path} has been saved!`);
   });
 });
