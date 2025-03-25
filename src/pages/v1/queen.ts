@@ -1,5 +1,7 @@
 import type { APIRoute } from "astro";
 
+export const prerender = false;
+
 const headers = {
   "Content-Type": "application/json",
   "Access-Control-Allow-Origin": "*",
