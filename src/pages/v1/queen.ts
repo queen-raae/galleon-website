@@ -1,6 +1,12 @@
 import type { APIRoute } from 'astro'
 
+const headers = {
+  "Content-Type": "application/json",
+};
+
 export const GET: APIRoute = () => {
+  
+  // Respond
   return new Response(
     JSON.stringify({
         name: 'Queen Raae',
@@ -14,6 +20,9 @@ export const GET: APIRoute = () => {
             { url: 'http://github.com/raae', label: 'GitHub' }
         ]   
     }),
+    {
+      headers,
+    },
   )
 }
 
