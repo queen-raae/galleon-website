@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro'
 
 const headers = {
   "Content-Type": "application/json",
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, OPTIONS",
 };
 
 export const GET: APIRoute = () => {
