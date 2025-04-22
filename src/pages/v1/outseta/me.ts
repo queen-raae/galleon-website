@@ -11,6 +11,11 @@ const verifyToken = async (token: string | undefined) => {
   try {
     const decoded = decodeJwt(token);
 
+    // Make sure the token is issued by an outseta account
+    if (!decoded.iss?.endsWith("outseta.com")) {
+      throw new Error("Invalid issuer");
+    }
+
     // Fetch the JSON Web Key (JWK) set
     const JWKS = createRemoteJWKSet(
       // ❕ Exchange for your outseta url
